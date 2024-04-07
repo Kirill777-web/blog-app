@@ -10,4 +10,6 @@ urlpatterns = [
     path('', views.index, name='index'),
     # Page to show all posts
     path('posts/', views.posts, name='posts'),
+    # Page for a single post
+    path('posts/<int:post_id>/', views.post, name='post')
 ]

@@ -20,3 +20,11 @@ def posts(request):
     # Assign the query results to a dictionary.
     context = {'posts': posts}
     return render(request, 'blog_app/posts.html', context)
+
+
+def post(request, post_id):
+    """Show a single post and all its entries."""
+    post = Post.objects.get(id=post_id)
+    entries = post.entry_set.order_by('-date_added')
+    context = {'post': post, 'entries': entries}
+    return render(request, 'blog_app/post.html', context)

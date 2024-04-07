@@ -1,11 +1,20 @@
 {% extends 'blog_app/base.html' %}
+{% load static %}
 
 {% block title %}Posts{% endblock title %}
 
 {% block content %}
-    <h1>Posts</h1>
-    {% for post in posts %}
-        {% comment %} <h2><a href="{% url 'blog_app:post_detail' post.id %}">{{ post.title }}</a></h2> {% endcomment %}
-        <p>{{ post.title }}</p>
-    {% endfor %}
+<link rel="stylesheet" href="{% static 'blog_app/css/posts.css' %}"> 
+<div class="posts-container">
+    <h1 class="posts-title">Posts</h1>
+    <ul class="posts-list">
+        {% for post in posts %}
+        <li class="post-summary">
+            <a href="{% url 'blog_app:post' post.id %}">{{ post.title }}</a>
+        </li>
+        {% empty %}
+        <li>No posts yet.</li>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'blog_app/base.html' %}
+{% load static %}
+
+{% block title %}{{ post.title }}{% endblock title %}
+
+{% block content %}
+<div class="post-container">
+    <h1 class="post-title">{{ post.title }}</h1>
+    
+    <div class="entries">
+        {% comment %} <h2 class="entries-title">Entries:</h2> {% endcomment %}
+        <ul>
+            {% for entry in entries %}
+              <li class="entry">
+                <p class="post-date">{{ entry.date_added|date:"M d, Y H:i" }}</p>
+                <div class="post-content">{{ entry.text|linebreaks }}</div>
+              </li>
+            {% empty %}
+              <li>No entries yet.</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endblock content %}
