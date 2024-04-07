@@ -32,4 +32,26 @@
 }
 
 .post-summary a:hover {
-    text-decoration: underline; 
+    text-decoration: underline;
+}
+
+.new_post{
+    text-decoration: none;
+    
+}
+
+.new-post-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none; 
+    text-align: center;
+    margin-top: 20px; 
+    cursor: pointer;
+}
+
+.new-post-btn:hover {
+    background-color: #0056b3; 
+}

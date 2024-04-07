@@ -13,6 +13,7 @@ html, body {
     background-color: #007bff; /* primary color */
     color: white;
     padding: 10px 0;
+    margin-bottom: 30px;
 }
 
 .navbar a {

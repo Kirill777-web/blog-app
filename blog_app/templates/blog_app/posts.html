@@ -12,9 +12,13 @@
         <li class="post-summary">
             <a href="{% url 'blog_app:post' post.id %}">{{ post.title }}</a>
         </li>
+        
         {% empty %}
+        
         <li>No posts yet.</li>
         {% endfor %}
     </ul>
+    <a class="new-post-btn" href="{% url 'blog_app:new_post' %}">Add new post</a>
+    
 </div>
 {% endblock %}

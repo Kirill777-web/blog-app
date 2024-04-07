@@ -1,7 +1,15 @@
- {% extends "blog_app/base.html" %}
+{% extends "blog_app/base.html" %}
 
 {% block title %}Blog App{% endblock title %}
 
 {% block content %}
-  <p>Blog application with Python, Django and AWS RDS MySQL Database</p>
+<div class="main-intro">
+  <h1>Welcome to My Blog App</h1>
+  <p>This blog application is built with the latest in web technology:</p>
+  <ul class="tech-stack">
+    <li>Python & Django for robust backend development</li>
+    <li>AWS RDS MySQL for secure and scalable database storage</li>
+  </ul>
+  <p>Explore the <a href="{% url 'blog_app:posts' %}">Posts</a> to see it in action!</p>
+</div>
 {% endblock content %}
