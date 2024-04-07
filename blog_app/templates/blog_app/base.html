@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>{% block title %}Blog App{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'blog_app/css/styles.css' %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{% url 'blog_app:index' %}">Home</a> -
+        <a href="{% url 'blog_app:posts' %}">Posts</a>
+        {% comment %} <a class="navbar-brand" href="{% url 'blog_app:contact' %}">Contacts</a> {% endcomment %}
+    </nav>
+
+    <!-- The main content block where child templates will insert their content -->
+    
+    {% block content %}
+
+    {% endblock content %}
+    <footer>
+        <p>&copy; 2024 Learning Log</p>
+    </footer>
+</body>
+</html>

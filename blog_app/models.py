@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 
-class Blog(models.Model):
+class Post(models.Model):
     title = models.CharField(max_length=200)
     date_added = models.DateTimeField(auto_now_add=True)
 
@@ -13,7 +13,7 @@ class Blog(models.Model):
 
 
 class Entry(models.Model):
-    blog = models.ForeignKey(Blog, on_delete=models.CASCADE)
+    blog = models.ForeignKey(Post, on_delete=models.CASCADE)
     text = models.TextField()
     date_added = models.DateTimeField(auto_now_add=True)
 
