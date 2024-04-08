@@ -36,6 +36,23 @@ html, body {
     text-decoration: underline;
 }
 
+/* Log out btn */
+.logout-button {
+    background-color: #ffffff; 
+    color: #007bff; 
+    border: none; 
+    padding: 0 30px; 
+    font-family: Arial, sans-serif; 
+    cursor: pointer;
+    border-radius: 5px; 
+    margin-left: 3px;
+}
+
+.logout-button:hover {
+    color: #51c1f5; 
+    text-decoration: none; 
+}
+
 /* Style the footer */
 footer {
     position: absolute;
