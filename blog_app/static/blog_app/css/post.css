@@ -1,16 +1,8 @@
-/* post.css */
 
-
-body {
-    margin: 0;
-    padding: 20px;
-    font-family: Arial, sans-serif; 
-    background-color: #f8f9fa; /* Light grey background for a subtle, modern look */
-}
-
-/* Container for the post content to center it and constrain its width */
+/* post content */
 .post-container {
     max-width: 80%;
+    padding: 20px;
     margin: auto;
     background-color: white; 
     padding: 20px;
@@ -54,4 +46,16 @@ body {
 ul, ol {
     list-style-type: none; /* removes styles */
     padding-left: 0; 
+}
+
+.new-entry-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
 }

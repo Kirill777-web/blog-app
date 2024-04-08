@@ -1,0 +1,19 @@
+{% extends 'blog_app/base.html' %}
+
+{% block title %}Edit entry{% endblock title %}
+
+
+{% block content %}
+
+
+<div class="entry-container">
+    <h2>Edit entry</h2>
+    <form action="{% url 'blog_app:edit_entry' entry.id %}" method="post" class="entry-form">
+        {% csrf_token %}
+        {{ form.as_div }}
+        <button type="submit" class="submit-btn">Save changes</button>
+    </form>
+    <a class="back-to-post" href="{% url 'blog_app:post' entry.blog.id %}">← Back to {{ entry.blog.title }}</a>
+</div>
+
+{% endblock content %}

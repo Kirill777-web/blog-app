@@ -9,11 +9,21 @@ html, body {
 
 /* Style the navbar */
 .navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; /* This vertically centers the content */
     width: 100%;
     background-color: #007bff; /* primary color */
     color: white;
     padding: 10px 0;
     margin-bottom: 30px;
+}
+
+/* Style for the navbar*/
+.navbar-content, .auth-links {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
 }
 
 .navbar a {

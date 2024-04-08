@@ -1,0 +1,23 @@
+{% extends 'blog_app/base.html' %}
+
+{% load static %}
+{% block title %}Log in{% endblock %}
+
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'accounts/css/login.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="login-container">
+    {% if form.errors %}
+        <p class="error-message">Your username and password didn't match. Please try again.</p>
+    {% endif %}
+
+    <form action="{% url 'accounts:login' %}" method="post" class="login-form">
+        {% csrf_token %}
+        {{ form.as_div }}
+        <button type="submit" class="login-button">Log in</button>
+    </form>
+</div>
+{% endblock %}

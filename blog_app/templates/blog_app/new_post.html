@@ -7,7 +7,7 @@
     <h1>Add New Post</h1>
     <form action="{% url 'blog_app:new_post' %}" method="post" class="post-form">
         {% csrf_token %}
-        {{ form.as_p }}
+        {{ form.as_div }}
         <button type="submit" class="new-post-btn">Add Post</button>
     </form>
 </div>

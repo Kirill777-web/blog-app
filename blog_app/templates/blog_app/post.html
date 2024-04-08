@@ -1,5 +1,4 @@
 {% extends 'blog_app/base.html' %}
-{% load static %}
 
 {% block title %}{{ post.title }}{% endblock title %}
 
@@ -7,13 +6,16 @@
 <div class="post-container">
     <h1 class="post-title">{{ post.title }}</h1>
     
+      
     <div class="entries">
-        {% comment %} <h2 class="entries-title">Entries:</h2> {% endcomment %}
+        
         <ul>
             {% for entry in entries %}
               <li class="entry">
                 <p class="post-date">{{ entry.date_added|date:"M d, Y H:i" }}</p>
                 <div class="post-content">{{ entry.text|linebreaks }}</div>
+                <a class="new-entry-btn" href="{% url 'blog_app:new_entry' post.id %}" >Add a new entry</a>
+                <a class="new-entry-btn" href="{% url 'blog_app:edit_entry' entry.id %}">Edit entry</a>
               </li>
             {% empty %}
               <li>No entries yet.</li>
@@ -21,4 +23,5 @@
         </ul>
     </div>
 </div>
+
 {% endblock content %}

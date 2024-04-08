@@ -9,21 +9,31 @@
     <link rel="stylesheet" href="{% static 'blog_app/css/posts.css' %}">
     <link rel="stylesheet" href="{% static 'blog_app/css/index.css' %}">
     <link rel="stylesheet" href="{% static 'blog_app/css/new_post.css' %}">
+    <link rel="stylesheet" href="{% static 'blog_app/css/new_entry.css' %}">
+    {% block extra_css %}{% endblock %}
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="{% url 'blog_app:index' %}">Home</a> -
-        <a href="{% url 'blog_app:posts' %}">Posts</a>
-        {% comment %} <a class="navbar-brand" href="{% url 'blog_app:contact' %}">Contacts</a> {% endcomment %}
+        <div class="navbar-content">
+            <a class="navbar-brand" href="{% url 'blog_app:index' %}">Home</a> -
+            <a href="{% url 'blog_app:posts' %}">Posts</a>
+            <!-- Your other links -->
+        </div>
+        <div class="auth-links">
+            {% if user.is_authenticated %}
+                Hello, {{ user.username }}.
+            {% else %}
+                <a href="{% url 'accounts:login' %}">Log in</a>
+            {% endif %}
+        </div>
     </nav>
 
     <!-- The main content block where child templates will insert their content -->
-    
     {% block content %}
-
     {% endblock content %}
+    
     <footer>
-        <p>&copy; 2024 Learning Log</p>
+        <p>&copy; 2024 Blog App</p>
     </footer>
 </body>
 </html>

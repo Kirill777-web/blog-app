@@ -1,6 +1,6 @@
 
 from django import forms
-from .models import Post
+from .models import Post, Entry
 
 
 class PostForm(forms.ModelForm):
@@ -8,3 +8,11 @@ class PostForm(forms.ModelForm):
         model = Post
         fields = ['title']
         labels = {'title': ''}
+
+
+class EntryForm(forms.ModelForm):
+    class Meta:
+        model = Entry
+        fields = ['text']
+        labels = {'text': ''}
+        widgets = {'text': forms.Textarea(attrs={'cols': 80})}
