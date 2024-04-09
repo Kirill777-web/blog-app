@@ -21,12 +21,13 @@
         </div>
         <div class="auth-links">
             {% if user.is_authenticated %}
-                Hello, {{ user.username }}.
+                Hello, {{ user.username }}
                 <form action="{% url 'accounts:logout' %}" method="post">
                     {% csrf_token %}
                     <button type="submit" class="logout-button">Logout</button>
                 </form>
             {% else %}
+                <a href="{% url 'accounts:register' %}">Register</a>
                 <a href="{% url 'accounts:login' %}">Log in</a>
             {% endif %}
         </div>

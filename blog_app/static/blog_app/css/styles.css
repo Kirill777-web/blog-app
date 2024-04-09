@@ -23,7 +23,7 @@ html, body {
 .navbar-content, .auth-links {
     display: flex;
     align-items: center;
-    padding-right: 10px;
+    padding-right: 20px;
 }
 
 .navbar a {
@@ -45,7 +45,7 @@ html, body {
     font-family: Arial, sans-serif; 
     cursor: pointer;
     border-radius: 5px; 
-    margin-left: 3px;
+    margin-left: 30px;
 }
 
 .logout-button:hover {
