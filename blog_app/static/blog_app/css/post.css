@@ -1,53 +1,86 @@
 
-/* post content */
 .post-container {
     max-width: 80%;
-    padding: 20px;
     margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
     background-color: white; 
     padding: 20px;
     border-radius: 8px; 
     box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
 }
 
-/* Styling for the post title */
+
 .post-title {
     text-align: center;
-    color: #333; /* Dark grey */
-    font-size: 28px;
-    margin-bottom: 10px; /* Space between the title and the date */
+    color: #333; 
+    font-size: 28px; 
+    margin-bottom: 10px; 
 }
 
-/* Styling for the post date */
+.post-underline {
+    width: 100px;
+    height: 3px;
+    background-color: #007bff; 
+    margin: auto; 
+    margin-bottom: 20px; 
+}
+
+.date-and-edit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ccc; 
+    padding: 10px 0;
+    margin-bottom: 20px; 
+}
+
+
 .post-date {
-    text-align: center;
-    color: #666; /* Lighter grey */
-    margin-bottom: 20px; /* Space between the date and the content */
+    text-align: left;
+    color: #666; 
+    margin-bottom: 0;
+    flex-grow: 1; 
 }
 
-/* Styling for the post content */
+
 .post-content {
     text-align: justify; 
     line-height: 1.6; 
 }
 
+
 .entries {
-    text-align: center; /* Center the "Entries" title */
+    text-align: center; 
 }
+
 
 .entries-title {
     color: #333;
-    margin-bottom: 20px; /* Space below the "Entries" title */
+    margin-bottom: 20px; 
 }
 
+
 .entry {
-    margin-bottom: 15px; /* Space between entries */
+    margin-bottom: 15px; 
 }
+
 ul, ol {
-    list-style-type: none; /* removes styles */
+    list-style-type: none;
     padding-left: 0; 
 }
 
+
+.edit-entry-btn {
+    margin-left: 10px;
+     color: blue;
+    cursor: pointer; 
+    white-space: nowrap;
+}
+.edit-entry-btn:hover {
+    color: rgb(255, 0, 34);
+    text-decoration: none; 
+}
 .new-entry-btn {
     display: inline-block;
     background-color: #007bff;
@@ -58,4 +91,15 @@ ul, ol {
     text-align: center;
     margin-top: 20px;
     cursor: pointer;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .post-container {
+        max-width: 95%; 
+        padding: 10px; 
+    }
+    .post-title, .post-date, .entries-title {
+        text-align: left; 
+    }
 }
