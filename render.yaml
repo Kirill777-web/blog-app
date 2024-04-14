@@ -1,10 +1,9 @@
 services:
   - type: web
-    name: ll-project
+    name: blog-app
     env: python-3.11
-    region: oregon  # optional: specify the region (oregon is default)
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn ll_project.wsgi:application --bind 0.0.0.0:10000"
+    startCommand: "gunicorn --chdir /path/to/your/local/blog-app ll_project.wsgi:application --bind 0.0.0.0:8000"
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: ll_project.settings
