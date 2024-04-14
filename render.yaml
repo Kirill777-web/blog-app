@@ -4,11 +4,11 @@ services:
     env: python-3.11
     buildCommand: "pip install -r requirements.txt"
     startCommand: "gunicorn --chdir /opt/render/project/src/blog-app ll_project.wsgi:application --bind 0.0.0.0:8000"
-"
-"
+
+
     envVars:
       - key: PYTHONPATH
-        value: /opt/render/project/src/blog-app
+        value: /opt/render/project/src/blog-app 
       - key: DJANGO_SETTINGS_MODULE
         value: ll_project.settings
       - key: SECRET_KEY
@@ -17,21 +17,21 @@ services:
         value: "False"
       - key: RDS_DB_NAME
         fromDatabase:
-          name: your-database-service-name
+          name: db-blog-app
           property: name
       - key: RDS_USERNAME
         fromDatabase:
-          name: your-database-service-name
+          name: db-blog-app
           property: user
       - key: RDS_PASSWORD
         fromDatabase:
-          name: your-database-service-name
+          name: db-blog-app
           property: password
       - key: RDS_HOSTNAME
         fromDatabase:
-          name: your-database-service-name
+          name: db-blog-app
           property: host
       - key: RDS_PORT
         fromDatabase:
-          name: your-database-service-name
+          name: db-blog-app
           property: port
