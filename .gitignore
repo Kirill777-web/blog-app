@@ -147,3 +147,6 @@ ll_project/settings.py
 # ignore env
 ll_env
 sqlquery.sql
+
+# Static files
+staticfiles/
