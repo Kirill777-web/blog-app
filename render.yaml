@@ -3,7 +3,9 @@ services:
     name: blog-app
     env: python-3.11
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn --chdir /path/to/your/local/blog-app ll_project.wsgi:application --bind 0.0.0.0:8000"
+    startCommand: "gunicorn --chdir /opt/render/project/src/blog-app ll_project.wsgi:application --bind 0.0.0.0:8000"
+"
+"
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: ll_project.settings
