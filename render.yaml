@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: ll-project
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn ll_project.wsgi:application --bind 0.0.0.0:10000"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: ll_project.settings
+      - key: SECRET_KEY
+        sync: false
+      - key: DEBUG
+        sync: false
+      - key: RDS_DB_NAME
+        sync: false
+      - key: RDS_USERNAME
+        sync: false
+      - key: RDS_PASSWORD
+        sync: false
+      - key: RDS_HOSTNAME
+        sync: false
+      - key: RDS_PORT
+        sync: false
