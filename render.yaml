@@ -1,23 +1,34 @@
 services:
   - type: web
     name: ll-project
-    env: python
+    env: python-3.11
+    region: oregon  # optional: specify the region (oregon is default)
     buildCommand: "pip install -r requirements.txt"
     startCommand: "gunicorn ll_project.wsgi:application --bind 0.0.0.0:10000"
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: ll_project.settings
       - key: SECRET_KEY
-        sync: false
+        generateValue: true
       - key: DEBUG
-        sync: false
+        value: "False"
       - key: RDS_DB_NAME
-        sync: false
+        fromDatabase:
+          name: your-database-service-name
+          property: name
       - key: RDS_USERNAME
-        sync: false
+        fromDatabase:
+          name: your-database-service-name
+          property: user
       - key: RDS_PASSWORD
-        sync: false
+        fromDatabase:
+          name: your-database-service-name
+          property: password
       - key: RDS_HOSTNAME
-        sync: false
+        fromDatabase:
+          name: your-database-service-name
+          property: host
       - key: RDS_PORT
-        sync: false
+        fromDatabase:
+          name: your-database-service-name
+          property: port
