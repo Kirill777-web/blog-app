@@ -39,3 +39,7 @@ hooks:
         rm -rf logs
     deploy: |
         python manage.py migrate
+
+variables:
+  env:
+    DJANGO_SETTINGS_MODULE: "ll_project.settings"
