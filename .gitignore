@@ -150,3 +150,6 @@ sqlquery.sql
 
 # Static files
 staticfiles/
+
+# Ignore .ebextensions
+.ebextensions/
