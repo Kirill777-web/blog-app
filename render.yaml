@@ -9,9 +9,9 @@ services:
 
      envVars:
       - key: PYTHONPATH
-        value: /opt/render/project/src/blog-app 
+        value: "/opt/render/project/src/blog-app"
       - key: DJANGO_SETTINGS_MODULE
-        value: ll_project.settings
+        value: "ll_project.settings"
       - key: SECRET_KEY
         generateValue: true
       - key: DEBUG
