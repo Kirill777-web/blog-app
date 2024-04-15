@@ -3,13 +3,15 @@ services:
      plan: free
      name: blog-app
      runtime: python
-     buildCommand: "pip install -r requirements.txt && ls -R /opt/render/project/src > /opt/render/project/src/structure.txt && cat /opt/render/project/src/structure.txt"
-     startCommand: "export PYTHONPATH=/opt/render/project/src && export DJANGO_SETTINGS_MODULE=ll_project.settings && echo 'PYTHONPATH is set to: ' $PYTHONPATH && echo 'DJANGO_SETTINGS_MODULE is set to: ' $DJANGO_SETTINGS_MODULE && gunicorn ll_project.wsgi:application --bind 0.0.0.0:8000"
+     buildCommand: "pip install -r requirements.txt && ls -R /opt/render/project/src/blog-app"
+     startCommand: "export PYTHONPATH=/opt/render/project/src/blog-app && export DJANGO_SETTINGS_MODULE=ll_project.settings && gunicorn ll_project.wsgi:application --bind 0.0.0.0:8000"
 
 
 
 
      envVars:
+      - key: PYTHONPATH
+        value: "/opt/render/project/src/blog-app"
       - key: DJANGO_SETTINGS_MODULE
         value: "ll_project.settings"
       - key: SECRET_KEY

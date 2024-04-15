@@ -25,4 +25,3 @@ logger.debug(f'DJANGO_SETTINGS_MODULE: {os.getenv("DJANGO_SETTINGS_MODULE")}')
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'll_project.settings')
 application = get_wsgi_application()
-print("Directory contents:", os.listdir('/opt/render/project/src'))
