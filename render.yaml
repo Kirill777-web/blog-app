@@ -4,7 +4,7 @@ services:
      name: blog-app
      runtime: python
      buildCommand: "pip install -r requirements.txt"
-     startCommand: "cd /opt/render/project/src && gunicorn ll_project.wsgi:application --bind 0.0.0.0:8000"
+     startCommand: "export PYTHONPATH=/opt/render/project/src && echo 'PYTHONPATH is set to: ' $PYTHONPATH && gunicorn ll_project.wsgi:application --bind 0.0.0.0:8000"
 
 
      envVars:
