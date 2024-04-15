@@ -8,20 +8,15 @@ https://docs.djangoproject.com/en/5.0/howto/deployment/wsgi/
 """
 
 # ll_project/wsgi.py
-
-from django.core.wsgi import get_wsgi_application
 import os
-import logging
+import sys
+from django.core.wsgi import get_wsgi_application
 
-logging.basicConfig(level=logging.DEBUG)
-logger = logging.getLogger(__name__)
-
-logger.debug('Starting up...')
-logger.debug(f'Current WORKDIR: {os.getcwd()}')
-logger.debug(f'PYTHONPATH: {os.getenv("PYTHONPATH")}')
-logger.debug(f'WSGI file location: {__file__}')
-logger.debug(f'DJANGO_SETTINGS_MODULE: {os.getenv("DJANGO_SETTINGS_MODULE")}')
-
+# Print system path and current working directory
+print('Current PYTHONPATH:', sys.path)
+print('Current Working Directory:', os.getcwd())
+print('Directory Listing:', os.listdir(os.getcwd()))
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'll_project.settings')
+
 application = get_wsgi_application()
