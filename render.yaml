@@ -4,7 +4,7 @@ services:
      name: blog-app
      runtime: python
      buildCommand: "pip install -r requirements.txt"
-     startCommand: "gunicorn ll_project.wsgi:application --bind 0.0.0.0:8000"
+     startCommand: "cd /opt/render/project/src/blog-app && gunicorn ll_project.wsgi:application --bind 0.0.0.0:8000"
 
 
      envVars:
