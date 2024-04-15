@@ -4,7 +4,7 @@ services:
      name: blog-app
      runtime: python
      buildCommand: "pip install -r requirements.txt && ls -R /opt/render/project/src/blog-app"
-     startCommand: "cd /opt/render/project/src && export PYTHONPATH=/opt/render/project/src && export DJANGO_SETTINGS_MODULE=ll_project.settings && gunicorn ll_project.wsgi:application --bind 0.0.0.0:8000"
+     startCommand: "export PYTHONPATH=/opt/render/project/src/blog-app:$PYTHONPATH && export DJANGO_SETTINGS_MODULE=ll_project.settings && gunicorn ll_project.wsgi:application --bind 0.0.0.0:8000"
 
 
 
