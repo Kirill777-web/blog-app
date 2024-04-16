@@ -1,8 +1,0 @@
-services:
-    - type: web
-      plan: free
-      name: blog-app
-      runtime: python
-      buildCommand: "./build.sh"
-      startCommand: "gunicorn ll_project.asgi:application -k uvicorn.workers.UvicornWorker"
-      
