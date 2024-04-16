@@ -142,7 +142,6 @@ dmypy.json
 .dbeaver/
 
 # Ignore Django settings
-ll_project/settings.py
 
 # ignore env
 ll_env
@@ -152,7 +151,7 @@ sqlquery.sql
 staticfiles/
 
 # Ignore .ebextensions
-.ebextensions/
+
 
 # Ignore .zip
 
