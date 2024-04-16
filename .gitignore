@@ -157,6 +157,3 @@ staticfiles/
 # Ignore .zip
 
 *.zip
-
-# Requirements
-requirements.txt
