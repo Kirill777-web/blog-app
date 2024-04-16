@@ -147,8 +147,7 @@ dmypy.json
 ll_env
 sqlquery.sql
 
-# Static files
-staticfiles/
+
 
 # Ignore .ebextensions
 

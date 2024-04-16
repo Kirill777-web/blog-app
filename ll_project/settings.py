@@ -134,11 +134,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 STATIC_URL = '/static/'
-if not DEBUG:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Choose storage based on the DEBUG value
+if not DEBUG:
+    # Use compressed manifest storage when debug is False (production)
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+else:
+    # Use default storage when debugging
+    STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
 STATICFILES_DIRS = []
 

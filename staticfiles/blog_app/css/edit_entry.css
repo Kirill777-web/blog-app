@@ -1,0 +1,40 @@
+.entry-container {
+    max-width: 650px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.back-to-post a {
+    color: #007bff;
+    text-decoration: none;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.back-to-post a:hover {
+    text-decoration: underline;
+}
+
+.entry-form p {
+    text-align: left;
+    margin: 15px 0;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block; 
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
