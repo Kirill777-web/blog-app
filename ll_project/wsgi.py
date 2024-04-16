@@ -16,5 +16,3 @@ print("Current PYTHONPATH:", sys.path)
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'll_project.settings')
 
 application = get_wsgi_application()
-print("DJANGO_SETTINGS_MODULE:", os.getenv("DJANGO_SETTINGS_MODULE"))
-print("Current PYTHONPATH:", os.sys.path)
