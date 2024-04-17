@@ -12,7 +12,7 @@ Blog-tech is a simple and efficient blogging application built using Python and 
 
 ## Link Heroku
 
-This web application is hosted on Heroku [https://render.com/](https://dashboard.heroku.com/apps/blog-tech)
+Accessing the Blog-tech visit link deployed application [Heroku](https://dashboard.heroku.com/apps/blog-tech)
 ## Screenshots
 ![Screenshot](/screenshots/main_page.png)
 ![Screenshot](/screenshots/add_post.png)
