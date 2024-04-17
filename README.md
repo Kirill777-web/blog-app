@@ -45,8 +45,7 @@ To use Blog-tech, follow these steps:
 
 - **AWS**: Used for the RDS MySQL database which stores user data and blog posts.
 - **Heroku**: Deployment platform for making the application accessible over the web.
-- **Python/Django**: The application is built with Django, a high-level Python web framework that encourages rapid development and clean,    
-    pragmatic design. 
+- **Python/Django**: The application is built with Django, a high-level Python web framework that encourages rapid development and clean,pragmatic design. 
 
     ## Credits
 
