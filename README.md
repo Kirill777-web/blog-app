@@ -10,6 +10,9 @@ Blog-tech is a simple and efficient blogging application built using Python and 
 - **Login/Registration System**: Secure access control allowing users to register and manage their accounts.
 - **Blog Management**: Users can easily create, update, and delete their blog posts.
 
+## Link Heroku
+
+This web application is hosted on Heroku [https://render.com/](https://dashboard.heroku.com/apps/blog-tech)
 ## Screenshots
 ![Screenshot](/screenshots/main_page.png)
 ![Screenshot](/screenshots/add_post.png)
