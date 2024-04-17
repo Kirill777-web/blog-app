@@ -12,7 +12,7 @@ Blog-tech is a simple and efficient blogging application built using Python and 
 
 ## Link Heroku
 
-Accessing the Blog-tech visit link deployed application [Heroku](https://dashboard.heroku.com/apps/blog-tech)
+Accessing the Blog-tech visit link deployed application [Heroku](https://blog-tech-350ff9f86fbf.herokuapp.com/)
 ## Screenshots
 ![Screenshot](/screenshots/main_page.png)
 ![Screenshot](/screenshots/add_post.png)
